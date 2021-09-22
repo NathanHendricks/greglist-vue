@@ -5,8 +5,8 @@
       <div class="card-body">
         <h5 class="d-flex justify-content-between">
           <span>Bedrooms: {{ house.bedrooms }} - Bathrooms: {{ house.bathrooms }}</span>
-          <span>$ {{ house.price }} </span>
         </h5>
+        <p><span>$ {{ house.price }} </span></p>
         <p> Year: {{ house.year }} Description: {{ house.description }}</p>
       </div>
     </router-link>

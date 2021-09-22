@@ -28,7 +28,7 @@ class HousesService {
   async removeHouse(houseId) {
     await api.delete(`api/houses/${houseId}`)
     AppState.house = null
-    AppState.houses.filter(c => c.id !== houseId)
+    AppState.houses.filter(h => h.id !== houseId)
   }
 }
 

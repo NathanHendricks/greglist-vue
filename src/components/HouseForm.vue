@@ -67,12 +67,12 @@
       >
     </div>
     <div class="form-group">
-      <label for="imgUrl" class="">imgUrl:</label>
-      <input v-model="editable.imgUrl"
+      <label for="img" class="">img:</label>
+      <input v-model="editable.img"
              type="url"
              class="form-control"
-             name="imgUrl"
-             id="imgUrl"
+             name="img"
+             id="img"
              required
       >
     </div>

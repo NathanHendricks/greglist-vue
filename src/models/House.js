@@ -5,7 +5,7 @@ export class House {
     this.bathrooms = houseData.bathrooms
     this.levels = houseData.levels
     this.year = houseData.year
-    this.img = houseData.imgUrl
+    this.img = houseData.img
     this.price = houseData.price
     this.description = houseData.description
     this.creatorId = houseData.creatorId

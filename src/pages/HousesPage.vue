@@ -7,8 +7,8 @@
         </button>
       </div>
     </div>
-    <div class="row">
-      <House v-for="house in houses" :key="house.id" :house="house" class="col-lg-3" />
+    <div class="row px-4">
+      <House v-for="house in houses" :key="house.id" :house="house" class="col-md-3 d-flex " />
     </div>
     <Modal id="house-form">
       <template #modal-title>

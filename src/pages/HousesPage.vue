@@ -7,7 +7,7 @@
         </button>
       </div>
     </div>
-    <div class="row px-4">
+    <div class="row ps-4">
       <House v-for="house in houses" :key="house.id" :house="house" class="col-md-3 d-flex " />
     </div>
     <Modal id="house-form">

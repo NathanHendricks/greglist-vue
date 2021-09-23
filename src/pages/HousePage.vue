@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <Modal id="#edit-modal">
+    <Modal id="edit-modal">
       <template #modal-title>
         {{ house.year }} - {{ house.bedrooms }} - {{ house.bathrooms }}
       </template>
@@ -48,11 +48,10 @@
 <script>
 import { computed, onMounted } from '@vue/runtime-core'
 import { housesService } from '../services/HousesService'
+import { useRoute } from 'vue-router'
 import { AppState } from '../AppState'
 import Pop from '../utils/Pop'
 import { router } from '../router'
-import { useRoute } from 'vue-router'
-import { logger } from '../utils/Logger'
 export default {
   setup() {
     const route = useRoute()
@@ -65,7 +64,6 @@ export default {
       account: computed(() => AppState.account),
       house: computed(() => AppState.house),
       async remove(house) {
-        logger.log(house)
         try {
           const yes = await Pop.confirm('are you sure?')
           if (!yes) { return }

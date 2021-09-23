@@ -93,13 +93,13 @@ import { House } from '../models/House'
 import { watchEffect } from '@vue/runtime-core'
 import { housesService } from '../services/HousesService'
 import Pop from '../utils/Pop'
+import { Modal } from 'bootstrap'
 export default {
   props: {
     house: { type: House, default: () => new House() }
   },
   setup(props) {
     const editable = ref({})
-
     watchEffect(() => {
       editable.value = { ...props.house }
     })
@@ -112,8 +112,10 @@ export default {
             await housesService.editHouse(editable.value)
           } else {
             await housesService.createHouse(editable.value)
+            editable.value = {}
           }
-          editable.value = {}
+          const modal = Modal.getInstance(document.getElementById('edit-modal'))
+          modal.hide()
         } catch (error) {
           Pop.toast(error.message, 'error')
         }
